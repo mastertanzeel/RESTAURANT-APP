@@ -1,0 +1,42 @@
+@import "../_palette.scss";
+
+.drawer {
+    position: fixed;
+    width: 400px;
+    height: calc(100vh - 55px);
+    background-color: $primary;
+    top: 55px;
+    left: 0;
+    z-index: 10;
+}
+
+.invisible-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.drawerHeadingList {
+    margin-left: 50px;
+    margin-top: 55px;
+            .drawerHeadings {
+                color: $white;
+                font-size: $headerSize;
+                margin-bottom: 6px;
+            }
+}
+
+
+.footer {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto auto;
+    b {
+        color: $white;
+        font-size: $headerSize;
+    }  
+}

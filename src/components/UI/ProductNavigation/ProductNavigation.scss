@@ -1,0 +1,29 @@
+@import "../_palette.scss";
+
+.product-naviation {
+    width: 100%;
+    max-width: $contentWidth;
+    margin: 0 auto;
+
+    select {
+        appearance: none;
+        width: 100%;
+        background-color: $white;
+        border-width: 0px;
+        border-radius: 0 0 9px 9px;
+
+        @include boxShadow;
+
+        height: 65px;
+        text-align-last: center;
+
+        font-family: "Futura-Bold";
+        font-size: $headerSize;
+        color: $primary;
+        text-decoration: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

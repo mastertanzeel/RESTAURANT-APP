@@ -1,0 +1,20 @@
+@import "../_palette.scss";
+
+form.form {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    @include boxShadow();
+    margin-top: 58px;
+    button {
+        margin-top: 54px;
+        width: 100%;
+        @include bigButtonBasics();
+    }
+
+    h1 {
+        font-size: 32px;
+        color: $primary;
+    }
+}

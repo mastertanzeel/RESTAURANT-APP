@@ -1,0 +1,94 @@
+@import "../_palette.scss";
+
+.product-card {
+    cursor: pointer;
+    position: relative;
+    display: grid;
+    grid-template-areas:
+        "name img"
+        "toppings img"
+        "price img"
+        "orderBtn img";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    text-decoration: none;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-top: 24px;
+    height: 230px;
+    min-width: 300px;
+    .cardBG {
+        position: absolute;
+        background-color: $white;
+        border-radius: $borderRadius;
+        height: 86%;
+        width: 80%;
+        max-width: 380px;
+        z-index: -1;
+        @include boxShadow;
+    }
+
+    .pizzaName {
+        grid-area: name;
+        margin-top: 0px;
+    }
+
+    .toppings {
+        grid-area: toppings;
+        margin: 0px;
+    }
+
+    .variant-prices {
+        grid-area: price;
+        align-self: end;
+
+        .pizzaPrice {
+            display: grid;
+            grid-template-columns: 1fr 6fr;
+            grid-gap: 10px;
+            margin-top: 3px;
+
+            .var-label {
+                color: $darker;
+                justify-self: end;
+            }
+        }
+    }
+
+    .orderBtn {
+        position: relative;
+        grid-area: orderBtn;
+        color: $white;
+        background-color: $primary;
+        width: 120px;
+        height: 30px;
+        border-width: 0px;
+        border-radius: $borderRadius;
+        align-self: end;
+        align-items: center;
+
+        .icon {
+            position: absolute;
+            left: 10px;
+            top: 7px;
+        }
+    }
+
+    .img-container {
+        grid-area: img;
+        align-self: top;
+        justify-self: center;
+        height: 100%;
+
+        .pizzaImg {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+
+            max-width: 100%;
+            max-height: 180px;
+
+            padding: 5px;
+        }
+    }
+}

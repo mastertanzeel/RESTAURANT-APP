@@ -1,0 +1,27 @@
+@import "../_palette.scss";
+
+.cart-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  .cart-modal {
+    width: calc(100% - #{$contentPadding});
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    z-index: 5;
+    background-color: white;
+  }
+  .cart-background {
+    top: 0;
+    z-index: 4;
+    opacity: 0.41;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+  }
+}

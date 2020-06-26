@@ -1,0 +1,14 @@
+@import "../_palette.scss";
+
+.section {
+    width: calc(100% - (2 * #{$contentPadding}));
+    max-width: $sectionWidth;
+    margin: 20px auto;
+    .title {
+        font-size: $headerSize;
+    }
+
+    &.wide {
+        max-width: $contentWidth;
+    }
+}

@@ -1,0 +1,24 @@
+import React from 'react'
+import { useSelector } from "react-redux";
+
+// Renders the pizza box in the header m8
+export default function PizzaBox() {
+	const cart = useSelector(state => state.cart);
+
+	return (
+		<svg xmlns="http://www.w3.org/2000/svg" width="34.7" height="26.714" viewBox="0 0 34.7 26.714">
+			<g id="Group_203" data-name="Group 203" transform="translate(-327.3 -13)">
+				{cart.length &&
+					<>
+						<text id="_2" data-name="2" transform="translate(355.5 22)" fill="#fff" font-size="8" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-2.301" y="0">{cart.length}</tspan></text>
+						<g id="Ellipse_6" data-name="Ellipse 6" transform="translate(349 13)" fill="none" stroke="#fff" stroke-width="1">
+							<circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+							<circle cx="6.5" cy="6.5" r="6" fill="none" />
+						</g>
+					</>
+				}
+				<path id="icon" d="M27.679,43.8l-3.6-8.015H3.609L.009,43.8,0,43.818v4.177H27.7V43.845ZM4.208,36.707H23.48L26.664,43.8H1.024ZM26.775,47.069H.926V44.413L11.489,44.4a2.466,2.466,0,0,0,4.711,0l10.575.009v2.656Zm-3.608-9.283h-.276a.154.154,0,1,1,0-.309h.276a.154.154,0,1,1,0,.309Zm-.893,0H4.5a.154.154,0,1,1,0-.309H22.274a.154.154,0,0,1,0,.309Z" transform="translate(327.3 -8.281)" fill="#fff" />
+			</g>
+		</svg>
+	)
+}

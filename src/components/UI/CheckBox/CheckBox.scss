@@ -1,0 +1,103 @@
+@import "../_palette.scss";
+
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    label {
+        margin-right: 10px;
+
+        input {
+            position: absolute;
+            left: -100vw;
+        }
+    }
+    p {
+        align-self: center;
+        margin: 0px;
+    }
+}
+
+.checkbox-label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .checkmark {
+            background-color: $primary;
+        }
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: white;
+        height: $inputHeight;
+        width: $inputHeight;
+        border-width: 0px;
+        border-color: $bright;
+        border-radius: $borderRadius;
+        @include boxShadow();
+
+        &:hover {
+            background-color: lighten($primary, 20);
+        }
+    }
+
+    .error {
+        position: absolute;
+        bottom: -15px;
+        left: 38px;
+        color: red;
+        font-size: 0.95em;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 11px;
+        top: 7px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    .label {
+        margin-top: 7px;
+        cursor: pointer;
+    }
+
+    p {
+        margin: 5px;
+        cursor: default;
+    }
+
+    a {
+        color: $primary;
+    }
+}

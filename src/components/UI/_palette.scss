@@ -1,0 +1,125 @@
+// Colors
+$primary: #b51430;
+$bright: #f2f2f2;
+$inActive: #475b5a;
+$darker: #262626;
+$black: #000000;
+$white: #ffffff;
+
+//
+$contentPadding: 20px;
+
+// Sizes
+$contentWidth: 1290px;
+$tabletWidth: 1130px;
+$mobileWidth: 750px;
+$borderRadius: 10px;
+$sectionWidth: 336px;
+$inputHeight: 30px;
+
+// Fonts
+$headerSize: 28px;
+$textSize: 14px;
+
+@font-face {
+    font-family: "Futura-Bold";
+    src: url("/fonts/FuturaBold.eot");
+    src: url("/fonts/FuturaBold.eot?#iefix") format("embedded-opentype"),
+        url("/fonts/FuturaBold.otf") format("opentype"), url("/fonts/FuturaBold.svg") format("svg"),
+        url("/fonts/FuturaBold.ttf") format("truetype"), url("/fonts/FuturaBold.woff") format("woff"),
+        url("/fonts/FuturaBold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Futura-Light";
+    src: url("/fonts/FuturaLight.eot");
+    src: url("/fonts/FuturaLight.eot?#iefix") format("embedded-opentype"),
+        url("/fonts/FuturaLight.otf") format("opentype"), url("/fonts/FuturaLight.svg") format("svg"),
+        url("/fonts/FuturaLight.ttf") format("truetype"), url("/fonts/FuturaLight.woff") format("woff"),
+        url("/fonts/FuturaLight.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+button {
+    font-family: "Futura-Bold";
+    font-size: $textSize;
+    color: $black;
+    text-decoration: none;
+}
+
+p,
+input,
+label,
+textarea,
+ul,
+li {
+    font-family: "Futura-Light";
+    color: $black;
+    text-decoration: none;
+    font-size: $textSize;
+}
+main {
+    display: grid;
+}
+
+body {
+    background-color: $bright;
+}
+
+p {
+    line-height: 18px;
+}
+
+button:focus,
+select:focus {
+    outline: 0;
+}
+
+@mixin boxShadow {
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin mainContainer {
+    width: calc(100% - (2 * #{$contentPadding}));
+    max-width: $contentWidth;
+    margin: 0 auto;
+}
+
+@mixin bigButtonBasics {
+    width: 100%;
+    padding: 15px;
+    border-radius: $borderRadius;
+    border: none;
+    color: white;
+    background-color: $primary;
+    font-size: $textSize;
+    &:focus {
+        outline: none;
+    }
+}
+
+.pizzaSelector {
+    width: calc(100% - (2 * #{$contentPadding}));
+    max-width: $contentWidth;
+    margin: 0 auto;
+
+    display: grid;
+}
+
+.tools {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,19 @@
+@import "../_palette.scss";
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    b {
+        width: 100%;
+        margin-bottom: 9px;      
+    }
+    input {
+        height: $inputHeight;
+        border-width: 0px;
+        border-radius: $borderRadius;
+        padding-left: 10px;
+
+        @include boxShadow();
+    }
+}

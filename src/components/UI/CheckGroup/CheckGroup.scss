@@ -1,0 +1,27 @@
+@import "../_palette.scss";
+
+.check-group {
+    .toppingsInGroup{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .check-box {
+            margin-right: 10px;
+            margin-top: 10px;
+            button {
+                background-color: $white;
+                border: none;
+                padding: 8px;
+                @include boxShadow();
+                font-family: "Futura-Light";
+                &.active {
+                    padding: 6px;
+                    border: 2px solid $primary;
+                }
+                &.double {
+                    border-left: none;
+                }
+            }
+        }
+    }
+}

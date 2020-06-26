@@ -1,0 +1,10 @@
+@import "../_palette.scss";
+
+.dropTitle { 
+    margin-top: 18px;
+    
+    font-family: "Futura-Bold";
+    font-size: $headerSize;
+    color: $black;
+    text-decoration: none; 
+}

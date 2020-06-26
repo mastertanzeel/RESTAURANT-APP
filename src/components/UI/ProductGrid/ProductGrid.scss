@@ -1,0 +1,24 @@
+@import "../_palette.scss";
+
+.productContainer {
+    width: calc(100% - (2 * #{$contentPadding}));
+    max-width: $contentWidth;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+@media (max-width: $tabletWidth) {
+    .productContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: $mobileWidth) {
+    .productContainer {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+}

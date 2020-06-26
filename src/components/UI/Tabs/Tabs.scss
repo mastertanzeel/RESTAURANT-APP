@@ -1,0 +1,19 @@
+@import "../_palette.scss";
+
+.tabs {
+    margin-top: 16px;
+    .tab {
+        height: 40px;
+        width: 130px;
+        background-color: $white;
+        border: none;
+        border-radius: $borderRadius;
+        @include boxShadow();
+        color: $black;
+        margin-right: 16px;
+        &.active {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+}
